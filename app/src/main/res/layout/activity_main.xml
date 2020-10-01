@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/dark_bg_gradient"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/control_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/main_button_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_btn_shape"
+            android:backgroundTint="@color/colorAccent"
+            android:layout_marginTop="20dp"
+            tools:ignore="UselessParent">
+
+            <Button
+                android:id="@+id/main_button"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:fontFamily="@font/montserrat_extra_bold"
+                android:background="@drawable/main_btn_shape"
+                android:text="Start"
+                android:letterSpacing=".15"
+                android:textColor="@color/colorAccent"
+                android:textSize="25sp"
+                android:onClick="mainButtonClick"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/params_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="50dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Repeat"/>
+
+            <TextView
+                android:id="@+id/repeat_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"/>
+
+            <SeekBar
+                android:id="@+id/repeat_amount_seekbar"
+                style="@android:style/Widget.DeviceDefault.Light.SeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:max="20"
+                android:progressBackgroundTint="#F0F0F0"
+                android:min="1"
+                android:progress="5" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="70dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Delay(s)"/>
+
+            <TextView
+                android:id="@+id/delay_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"/>
+
+            <SeekBar
+                android:id="@+id/delay_amount_seekbar"
+                style="@android:style/Widget.DeviceDefault.Light.SeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:max="10"
+                android:progressBackgroundTint="#F0F0F0"
+                android:min="0"
+                android:progress="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Sound"/>
+
+            <Spinner
+                android:id="@+id/sound_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:popupBackground="@color/colorPrimaryDark"
+                android:layout_weight="2" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
